@@ -20,5 +20,14 @@ ActiveRecord::Schema.define(:version => 20130626172011) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+end
 
+ActiveRecord::Schema.define(:version => 20130626172631) do
+
+  create_table "questions", :force => true do |t|
+    t.text     "qt"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 end

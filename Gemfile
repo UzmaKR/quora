@@ -11,13 +11,19 @@ gem 'bcrypt-ruby'
 gem 'validates_email_format_of'
 gem 'heroku'
 
+
 #############################
 # Environment-specific gems #
 #############################
 
-group :production do 
+group :production do
   gem 'pg'
 end
+
+group :development do
+  gem 'sqlite3'
+end
+
 
 # The :assets group is for building static assets
 group :assets do
@@ -25,9 +31,6 @@ group :assets do
   gem 'therubyracer', :require => 'v8'                            # javascript runtime to support coffeescript
 end
 
-group :development do
-   gem 'sqlite3'
-end
 
 group :test do
   gem 'capybara'                                # integration testing DSL
