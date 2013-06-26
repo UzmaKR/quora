@@ -80,16 +80,17 @@ describe UsersController do
 
   describe "put UPDATE" do
 
-    let(:user) { create(:user, :email => Faker::Internet.email ) }
+    let(:user) { create(:user, :email => 'foo@baz.com' ) }
     context "with valid attributes" do
 
       it "should assign @user to the user" do
+        put :update, id: user.id, user: attributes_for(:user, :email => 'new@email.com')
         user.reload
-        user.email.should eq('foo@baz.com')
+        user.email.should eq('new@email.com')
       end
       
       it "should redirect_to the user show page" do
-        put :update, id: user, user: FactoryGirl.attributes_for(:user, :username => 'bazbok', :email => 'foo@baz.com')
+        put :update, id: user.id, user: attributes_for(:user, :username => 'bazbok', :email => 'foo@baz.com')
         response.should redirect_to user_path(user)
       end
     end
