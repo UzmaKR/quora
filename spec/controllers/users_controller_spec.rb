@@ -46,4 +46,56 @@ describe UsersController do
     end
   end
 
+  describe "POST create" do
+    context "with valid attributes" do
+      
+      it "should create a new user" do
+        expect {
+          post :create, user: attributes_for(:user)
+        }.to change(User, :count).by(1)
+      end
+
+      it "should redirect to the new user page" do
+        post :create, user: attributes_for(:user)
+        response.should redirect_to User.last
+      end
+    end
+
+    context "with invalid attributes" do
+
+      let!(:invalid_user) { build(:user, :email => "")}
+
+      it "should not create a new user" do
+        expect {
+          post :create, user: invalid_user
+        }.to_not change(User, :count)
+      end
+
+      it "should re render the new method" do
+        post :create, user: invalid_user
+        response.should render_template :new
+      end
+    end
+  end
+
+  describe "put UPDATE" do
+
+    let(:user) { create(:user, :email => Faker::Internet.email ) }
+    context "with valid attributes" do
+
+      it "should assign @user to the user" do
+        user.reload
+        user.email.should eq('foo@baz.com')
+      end
+      
+      it "should redirect_to the user show page" do
+        put :update, id: user, user: FactoryGirl.attributes_for(:user, :username => 'bazbok', :email => 'foo@baz.com')
+        response.should redirect_to user_path(user)
+      end
+    end
+
+    context "with invalid attributes" do
+    end
+  end
+
 end
