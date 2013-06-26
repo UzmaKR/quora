@@ -1,9 +1,7 @@
 class CreateQuestionTable < ActiveRecord::Migration
   def change
     create_table :questions do |t|
-      t.text :qt
-      t.references :user
-
+      t.text :question
       t.timestamps
     end
   end

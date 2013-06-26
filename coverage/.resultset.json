@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/quora/config/environment.rb": [
+      "/Users/apprentice/Desktop/quora/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/apprentice/quora/config/application.rb": [
+      "/Users/apprentice/Desktop/quora/config/application.rb": [
         1,
         null,
         1,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/apprentice/quora/config/boot.rb": [
+      "/Users/apprentice/Desktop/quora/config/boot.rb": [
         1,
         null,
         null,
@@ -80,7 +80,7 @@
         null,
         1
       ],
-      "/Users/apprentice/quora/config/environments/test.rb": [
+      "/Users/apprentice/Desktop/quora/config/environments/test.rb": [
         1,
         null,
         null,
@@ -119,7 +119,7 @@
         1,
         null
       ],
-      "/Users/apprentice/quora/config/initializers/backtrace_silencers.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -128,7 +128,7 @@
         null,
         null
       ],
-      "/Users/apprentice/quora/config/initializers/inflections.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -145,14 +145,14 @@
         null,
         null
       ],
-      "/Users/apprentice/quora/config/initializers/mime_types.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/apprentice/quora/config/initializers/secret_token.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -161,7 +161,7 @@
         null,
         1
       ],
-      "/Users/apprentice/quora/config/initializers/session_store.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -171,7 +171,7 @@
         null,
         null
       ],
-      "/Users/apprentice/quora/config/initializers/wrap_parameters.rb": [
+      "/Users/apprentice/Desktop/quora/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -187,16 +187,49 @@
         1,
         null
       ],
-      "/Users/apprentice/quora/app/controllers/application_controller.rb": [
+      "/Users/apprentice/Desktop/quora/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/Users/apprentice/quora/app/helpers/application_helper.rb": [
+      "/Users/apprentice/Desktop/quora/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/quora/app/models/user.rb": [
+      "/Users/apprentice/Desktop/quora/app/controllers/questions_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/quora/app/models/question.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/apprentice/Desktop/quora/app/models/user.rb": [
         1,
         1,
         null,
@@ -205,20 +238,30 @@
         null,
         null
       ],
-      "/Users/apprentice/quora/spec/factories/users.rb": [
-        null,
-        null,
+      "/Users/apprentice/Desktop/quora/spec/factories/questions.rb": [
         1,
         1,
-        5,
-        4,
         1,
         null,
         null
       ],
-      "/Users/apprentice/quora/config/routes.rb": [
+      "/Users/apprentice/Desktop/quora/spec/factories/users.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
         1,
         null,
+        null
+      ],
+      "/Users/apprentice/Desktop/quora/config/routes.rb": [
+        1,
+        null,
+        null,
+        null,
+        1,
         null,
         null,
         null,
@@ -277,6 +320,6 @@
         null
       ]
     },
-    "timestamp": 1372268797
+    "timestamp": 1372282612
   }
 }
