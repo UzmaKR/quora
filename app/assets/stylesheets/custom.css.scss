@@ -39,7 +39,7 @@ body {
 
 .login {
   width: 100%;
-  background-image:url('/assets/golden_gate.jpg');
+  background: url('/assets/golden_gate.jpg');
   margin-top: -63px;
   height:800px;
 }
@@ -122,4 +122,34 @@ h1.left {
 
 h1.left a {
   color: white;
+}
+
+/* user profile */
+
+.profile {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.main {
+  height: 10%;
+  border-bottom: 5px solid gray;
+}
+
+.main h1 {
+  color: black;
+  float: left;
+}
+
+.left_section {
+  width: 19%;
+  float: left;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.right_section {
+  width: 80%;
+  float: left;
+  padding-top: 10px;
 }
