@@ -1,5 +1,7 @@
 Quora::Application.routes.draw do
 
+  root :to => 'static_pages#home'
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   # The priority is based upon order of creation:
@@ -8,6 +10,8 @@ Quora::Application.routes.draw do
   resources :questions, :only => [:index, :show, :new, :create]
 
   resources :answers, :only => [:index, :new, :create, :show]
+  match '/about' => 'static_pages#about'
+  match '/contact' => 'static_pages#contact'
 
 
   # Sample of regular route:

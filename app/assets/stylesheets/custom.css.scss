@@ -1,0 +1,72 @@
+@import "bootstrap";
+
+/* universal */
+
+.container {
+  width: 100%;
+  background-color: black;
+}
+
+.header { 
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 1px solid grey;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.header {
+  background-color: #00B64F;
+}
+
+.login {
+  width: 100%;
+  background-image:url('/assets/golden_gate.jpg');
+  margin-top: -63px;
+  height:800px;
+}
+
+.form {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  text-align: center;
+  margin-top: -600px;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  margin-left: 400px;
+  margin-right: 400px
+}
+
+h1.title {
+  padding-top: 25px;
+}
+
+.form input {
+  height: 60px;
+  font-size:25px;
+  width: 70%;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
+/* typography */
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h1.left {
+  width: 0px;
+  margin-left: -100px;
+  padding-left: 20px;
+}

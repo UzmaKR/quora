@@ -31,6 +31,8 @@ GEM
     addressable (2.3.5)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.3.2.0)
+      sass (~> 3.2)
     builder (3.0.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -196,6 +198,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
+  bootstrap-sass
   capybara
   capybara-webkit
   debugger
