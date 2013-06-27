@@ -6,6 +6,8 @@ Quora::Application.routes.draw do
 
   resources :questions, :only => [:index, :show, :new, :create]
 
+  resources :answers, :only => [:index, :new, :create, :show]
+
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
