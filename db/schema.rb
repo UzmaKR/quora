@@ -15,18 +15,18 @@ ActiveRecord::Schema.define(:version => 20130627172303) do
 
   create_table "answers", :force => true do |t|
     t.text     "answer"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "question_id"
-    t.integer  "score"
+    t.integer  "score",       :default => 0
   end
 
   create_table "questions", :force => true do |t|
     t.text     "question"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
     t.integer  "user_id"
-    t.integer  "score"
+    t.integer  "score",      :default => 0
   end
 
   create_table "users", :force => true do |t|
