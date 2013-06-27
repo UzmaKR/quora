@@ -46,12 +46,26 @@ describe QuestionsController do
           post :create, question: attributes_for(:question)
         }.to change(Question, :count).by(1)
       end
-    end
 
       it "redirects to the new question" do
         post :create, question: attributes_for(:question)
         response.should render_template :show
       end
+    end
+    context "with invalid attributes" do
+      before(:each) do
+        invalid_question = build(:question, :question => "")
+      end
+      it "should not save answer to database" do
+        expect {
+          post :create, invalid_question: attributes_for(:question) 
+        }.to_not change(Question, :count).by(1)
+      end
+      it "should render the new form again" do
+        post :create, invalid_answer: attributes_for(:answer)
+        response.should render_template :new
+      end
+    end
   end
 
 
