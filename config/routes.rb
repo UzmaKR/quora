@@ -4,9 +4,9 @@ Quora::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create]
-  resources :questions, :only => [:index, :show, :new, :create]
-  resources :answers, :only => [:index, :new, :create, :show]
-
+  resources :questions, :only => [:index, :show, :new, :create] do
+    resources :answers, :only => [:index, :new, :create, :show]
+  end
   match '/about' => 'static_pages#about'
   match '/contact' => 'static_pages#contact'
   match '/signout' => 'sessions#destroy'
