@@ -15,8 +15,9 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(params[:question])
+    @question.user_id = current_user.id
     if @question.save
-      render :show, :locals => {:question => @question}
+      redirect_to question_path(@question)
     else
       render :new
     end

@@ -19,6 +19,11 @@ describe Question do
       question_without_text = build(:question, :question => "")
       expect(question_without_text).to_not be_valid
     end
+
+    it "should have an owner" do
+      question_without_user = build(:question, :user_id => "")
+      expect(question_without_user).to_not be_valid
+    end
   end
 
   describe "associations" do
