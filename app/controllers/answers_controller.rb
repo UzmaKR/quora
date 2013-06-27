@@ -27,7 +27,7 @@ class AnswersController < ApplicationController
 
   def vote
     answer = Answer.find(params[:id])
-    if vote = Vote.find_by_user_id_and_votable_id(current_user.id, params[:id])
+    if vote = Vote.find_by_user_id_and_votable_id_and_votable_type(current_user.id, params[:id], "Answer")
       redirect_to :back, alert: "You already voted on this."
     else
       vote = Vote.create(value: params[:value],votable_id: params[:id], votable_type: 'Answer', user_id: current_user.id)
