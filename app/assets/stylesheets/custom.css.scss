@@ -1,0 +1,155 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  margin-top: -10px;
+}
+
+.container {
+  width: 100%;
+}
+
+#wrapper {
+  margin-top: 0px;
+}
+
+.header { 
+  background-color: black;
+}
+
+.nav {
+  float: right;
+  margin-right: 50px;
+  margin-top: -41px;
+}
+
+.nav a {
+  color: white;
+  font-size: 24px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.login {
+  width: 100%;
+  background: url('/assets/golden_gate.jpg');
+  margin-top: -63px;
+  height:800px;
+}
+
+/* forms */
+
+.form {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  text-align: center;
+  margin-top: -600px;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  margin-left: 400px;
+  margin-right: 400px
+}
+
+
+.form input {
+  height: 60px;
+  font-size:25px;
+  width: 70%;
+}
+
+input {
+  height: 60px;
+  font-size:25px;
+  width: 50%;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+.form-sign-up {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-top: 20px;
+}
+
+.form-sign-up input {
+  height: 60px;
+  font-size:25px;
+  width: 70%;
+}
+
+.form-sessions {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-top: 20px;
+}
+
+.form-sessions input {
+  height: 60px;
+  font-size:25px;
+  width: 70%;
+}
+
+/* typography */
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h1.left {
+  width: 0px;
+  padding-left: 20px;
+}
+
+h1.left a {
+  color: white;
+}
+
+/* user profile */
+
+.profile {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.main {
+  height: 10%;
+  border-bottom: 5px solid gray;
+}
+
+.main h1 {
+  color: black;
+  float: left;
+}
+
+.left_section {
+  width: 19%;
+  float: left;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.right_section {
+  width: 80%;
+  float: left;
+  padding-top: 10px;
+}
