@@ -35,14 +35,14 @@ describe UsersController do
   describe "get #EDIT" do
     let(:user) { create(:user) }
 
-    it "should render a edit user view" do
-      get :edit, :id => user
-      response.should render_template :edit
-    end
-
     it "should assign the user to @user" do
       get :edit, :id => user
       assigns(:user).should eq user   
+    end
+
+    it "should render a edit user view" do
+      get :edit, :id => user
+      response.should render_template :edit
     end
   end
 
@@ -54,6 +54,10 @@ describe UsersController do
           post :create, user: attributes_for(:user)
         }.to change(User, :count).by(1)
       end
+
+      # it "should log the user in" do
+      #   expect{post :create, user: attributes_for(:user)}.to change(session[:user_id]).from('').to(1)
+      # end
 
       it "should redirect to the new user page" do
         post :create, user: attributes_for(:user)
