@@ -15,12 +15,14 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(params[:answer])
-    if @answer.save
-      render :show, :locals => {:answer => @answer}
-    else
-      render :new
-    end
+    @answer = Answer.create(answer: params[:answer][:answer],
+                           user_id: current_user.id, 
+                       question_id: params[:question_id])
+    # if @answer.save
+      redirect_to question_path(params[:question_id]), alert: "Thanks for answering this question!"
+  #   else
+  #     render :new
+  #   end
   end
 
 end
