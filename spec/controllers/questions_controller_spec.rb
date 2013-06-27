@@ -1,8 +1,13 @@
 require 'spec_helper'
+require 'application_controller'
 
 describe QuestionsController do
 
   let!(:question) { create(:question) }
+  let!(:user) { create(:user) }
+  before(:each) do
+    log_in_user(user)
+  end
 
   describe "GET #index" do
     it "gets all the questions" do
@@ -40,6 +45,7 @@ describe QuestionsController do
   end
 
   describe "POST create" do
+
     context "with valid attributes" do
       it "saves the question object to the database" do
         expect{
@@ -67,7 +73,4 @@ describe QuestionsController do
       end
     end
   end
-
-
-
 end
