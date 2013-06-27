@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Answer do
 
+  let(:question) { create(:question) }
   let(:answer) { create(:answer) }
 
   describe "accessible attributes" do
@@ -15,6 +16,11 @@ describe Answer do
       invalid_answer = build(:answer, :answer => "")
       expect(invalid_answer).to_not be_valid
     end
+  end
+
+  describe "associations" do
+    subject { answer }
+    it { should belong_to(:question) }
   end
 
 

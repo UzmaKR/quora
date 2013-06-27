@@ -3,6 +3,7 @@ require 'spec_helper'
 describe User do
   
   let(:user) { create(:user) }
+  let(:question) { create(:question) }
 
   describe "user attributes" do 
     it "should respond to name" do
@@ -54,5 +55,10 @@ describe User do
       mixed_case_user.save
       expect(mixed_case_user.reload.email).to eq(mixed_case_email.downcase)
     end
+  end
+
+  describe "associations" do
+    subject { user }
+    it { should have_many(:questions) }
   end
 end

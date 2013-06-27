@@ -35,6 +35,7 @@ end
 group :test do
   gem 'capybara'                                # integration testing DSL
   gem 'capybara-webkit'                         # browser driver for capybara
+  gem "shoulda-matchers"
 end
 
 group :test, :development do
