@@ -2,6 +2,7 @@ class AnswersController < ApplicationController
   
   def index
     @answers = Answer.all
+
   end
 
   def show
@@ -9,6 +10,7 @@ class AnswersController < ApplicationController
   end
 
   def new
+    @question= Question.find(params[:question_id])
     @answer = Answer.new
   end
 
