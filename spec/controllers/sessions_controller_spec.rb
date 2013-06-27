@@ -42,18 +42,17 @@ describe SessionsController do
 
     before(:each) do
       post :create, :session => { :email => user.email, :password => user.password }
+      log_in_user(user)
     end
 
     it "should clear the session" do
-      pending
-      # delete :destroy
-      # expect(session[:user_id]).to be_nil
+      delete :destroy
+      expect(session[:user_id]).to be_nil
     end
 
     it "should redirect_to the root path" do
-      pending
-      # delete :destroy
-      # redirect_to root_path
+      delete :destroy
+      redirect_to root_path
     end
   end
 
