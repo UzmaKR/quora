@@ -6,4 +6,5 @@
 
 %br
 =link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"
+=link_to "Upvote", vote_question_path(@question, value: 1), method: "post"
 

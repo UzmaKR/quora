@@ -24,4 +24,17 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def vote
+    question = Question.find(params[:id])
+    vote = Vote.new(value: params[:value], votable_id: params[:id], votable_type: 'Question', user_id: current_user.id)
+    if vote.save
+      redirect_to :back, notice: "Vote Registered"
+      question.score += params[:value].to_i
+      question.save
+    else
+      redirect_to :back, alert: "You already voted on this."
+    end
+
+  end
+
 end

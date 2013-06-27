@@ -31,5 +31,6 @@ end
 10.times do
   answer = Answer.new(answer: Faker::Lorem.sentence)
   answer.question = questions.sample
+  answer.user = users.sample
   answer.save
 end

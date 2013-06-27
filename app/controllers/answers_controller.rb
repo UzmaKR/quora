@@ -25,4 +25,7 @@ class AnswersController < ApplicationController
   #   end
   end
 
+  def vote
+  end
+  
 end
