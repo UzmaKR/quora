@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
 
   before_create :downcase_email
 
+  def vote!(resource, value)
+    resource.score += value.to_i
+    resource.save
+  end
+
 
   private 
 

@@ -1,14 +1,12 @@
 %h3 [#{@question.score}] #{@question.question}
 
 %div
-	- @answers.each do |a|
-		%p [#{a.score}] #{a.answer}
-		%p= a.user.username
-		=link_to "Upvote", vote_question_answer_path(@question, a, value: 1), method: "post"
-		=link_to "Downvote", vote_question_answer_path(@question, a, value: -1), method: "post"
+  -@answers.each do |a|
+    %p= a.answer
+    = a.votes.count
+    =link_to "UpVote", votes_path(resource_id: a.id, resource: a.class.to_s, value: 1), method: "post"
+    =link_to "DownVote", votes_path(resource: a.id, resource: a.class.to_s), method: "post"
 
 %br
 =link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"
-=link_to "Upvote", vote_question_path(@question, value: 1), method: "post"
-=link_to "Downvote", vote_question_path(@question, value: -1), method: "post"
 

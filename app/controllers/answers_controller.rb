@@ -25,16 +25,17 @@ class AnswersController < ApplicationController
   #   end
   end
 
-  def vote
-    answer = Answer.find(params[:id])
-    if vote = Vote.find_by_user_id_and_votable_id_and_votable_type(current_user.id, params[:id], "Answer")
-      redirect_to :back, alert: "You already voted on this."
-    else
-      vote = Vote.create(value: params[:value],votable_id: params[:id], votable_type: 'Answer', user_id: current_user.id)
-      answer.score += params[:value].to_i
-      answer.save
-      redirect_to :back, notice: "Vote Registered"
-    end
-  end
+  # def vote
+  #   debugger
+  #   answer = Answer.find(params[:id])
+  #   if vote = Vote.find_by_user_id_and_votable_id_and_votable_type(current_user.id, params[:id], "Answer")
+  #     redirect_to :back, alert: "You already voted on this."
+  #   else
+  #     vote = Vote.create(value: params[:value],votable_id: params[:id], votable_type: 'Answer', user_id: current_user.id)
+  #     answer.score += params[:value].to_i
+  #     answer.save
+  #     redirect_to :back, notice: "Vote Registered"
+  #   end
+  # end
 
 end
