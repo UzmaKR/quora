@@ -7,11 +7,11 @@ class VotesController < ApplicationController
     resource = params[:resource]
     case resource 
     when "Answer"
-      answer = Answer.find(params[:id])
+      answer = Answer.find(params[:resource_id])
       current_user.vote!(answer, params[:value])
       redirect_to :back, notice: "Vote Registered"
     else
-      question = Question.find(params[:id])
+      question = Question.find(params[:resource_id])
       current_user.vote!(question, params[:value])
       redirect_to :back, notice: "Vote Registered"
     end
@@ -20,9 +20,7 @@ class VotesController < ApplicationController
   private
 
   def already_voted
-    vote = Vote.find_by_user_id_and_votable_id_and_votable_type(current_user.id, params[:resource_id], params[:resource])
-    debugger
-    if vote
+    if Vote.find_by_user_id_and_votable_id_and_votable_type(current_user.id, params[:resource_id], params[:resource])
       redirect_to :back, alert: "You already voted on this."
     end
   end
