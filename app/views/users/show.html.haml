@@ -3,10 +3,8 @@
     %h1= @user.username
   .left_section
     %img{:src => "http://www.gravatar.com/avatar/<%= Digest::MD5.hexdigest(user.email) %>" }
-    followers?
-    etc
   .right_section
     .questions
-      questions
+      =link_to "Post a question", new_question_path, :class => "btn btn-large btn-success"
     .answers
-      answers
+      %h3 Your Answers
