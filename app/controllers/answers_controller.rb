@@ -1,5 +1,7 @@
 class AnswersController < ApplicationController
   
+  before_filter :authenticate_user, :only => [:create, :new] 
+
   def index
     @answers = Answer.all
 
