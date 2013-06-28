@@ -40,9 +40,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.0.0)
-      capybara (~> 2.0, >= 2.0.2)
-      json
     coderay (1.0.9)
     columnize (0.3.6)
     debugger (1.6.0)
@@ -167,6 +164,8 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    sextant (0.2.4)
+      rails (>= 3.2)
     shoulda-matchers (2.2.0)
       activesupport (>= 3.0.0)
     simplecov (0.7.1)
@@ -200,7 +199,6 @@ DEPENDENCIES
   bcrypt-ruby
   bootstrap-sass
   capybara
-  capybara-webkit
   debugger
   factory_girl_rails
   faker
@@ -213,6 +211,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   rspec-rails
   sass-rails (~> 3.2.3)
+  sextant
   shoulda-matchers
   simplecov
   sqlite3

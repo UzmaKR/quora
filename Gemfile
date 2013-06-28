@@ -35,7 +35,7 @@ end
 
 group :test do
   gem 'capybara'                                # integration testing DSL
-  gem 'capybara-webkit'                         # browser driver for capybara
+  # gem 'capybara-webkit'                         # browser driver for capybara
   gem "shoulda-matchers"
 end
 
@@ -47,4 +47,5 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'factory_girl_rails'                      # Factories for creating test objects
   gem 'faker'
+  gem 'sextant'
 end
