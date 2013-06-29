@@ -2,9 +2,11 @@
 %ul Question
 -answers.each do |answer|  
   %li=answer.question.question
+  =render :partial => 'shared/voting', :locals => {resource: answer.question}
   %br
   Answer:
   =answer.answer
+  =render :partial => 'shared/voting', :locals => {resource: answer}
   %br
 
 

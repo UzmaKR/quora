@@ -3,6 +3,7 @@
 %ul Question
 -questions.each do |question|
   %li=question.question
+  =render :partial => 'shared/voting', :locals => {resource: question}
   %br
   -if question.answers.empty?
     No answers available
@@ -10,4 +11,5 @@
     %ul Answers
     -question.answers.each do |answer|
       %li=answer.answer
+      =render :partial => 'shared/voting', :locals => {resource: answer}
     %br

@@ -1,3 +1,4 @@
 .voting
+  = resource.score
   =link_to "UpVote", votes_path(resource_id: resource.id, resource: resource.class.to_s, value: 1), method: "post"
   =link_to "DownVote", votes_path(resource_id: resource.id, resource: resource.class.to_s, value: -1), method: "post"
