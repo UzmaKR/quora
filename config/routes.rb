@@ -13,7 +13,7 @@ Quora::Application.routes.draw do
   match '/about' => 'static_pages#about'
   match '/contact' => 'static_pages#contact'
   match '/signout' => 'sessions#destroy'
-
+  match '/best_answer' => 'answers#assign_best_answer'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

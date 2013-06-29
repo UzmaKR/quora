@@ -26,4 +26,13 @@ class AnswersController < ApplicationController
   #     render :new
   #   end
   end
+
+
+  def assign_best_answer
+    @answer = Answer.find(params[:answer_id])
+    @question = @answer.question
+    @question.best_answer=@answer
+    redirect_to :back
+  end
+
 end

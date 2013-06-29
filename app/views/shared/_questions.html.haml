@@ -9,7 +9,10 @@
     No answers available
   -else
     %ul Answers
+    =question.best_answer.answer if question.best_answer
     -question.answers.each do |answer|
-      %li=answer.answer
+      %li=answer.answer 
+      -if current_user == question.user
+        =link_to 'Best Answer', best_answer_path(:answer_id => answer.id)
       =render :partial => 'shared/voting', :locals => {resource: answer}
     %br

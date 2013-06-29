@@ -8,6 +8,11 @@
 
 require 'faker'
 
+User.destroy_all
+Question.destroy_all
+Answer.destroy_all
+
+
 users = []
 
 2.times do
@@ -28,10 +33,17 @@ questions = []
   questions << question
 end
 
-10.times do
-  answer = Answer.new(answer: Faker::Lorem.sentence)
-  answer.question = questions.sample
-  answer.user = users.sample
-  answer.save
+
+questions.each do |q|
+  answers = []
+  10.times do
+    answer = Answer.new(answer: Faker::Lorem.sentence)
+    answer.question = q
+    answer.user = users.sample
+    answer.save
+    answers << answer
+  end
+  q.answer = answers.sample
+  q.save
 end
 
