@@ -1,0 +1,11 @@
+%h3 Questions
+%ul.questions
+-@questions.each do |question|
+  %p
+  %li
+    =render :partial => 'shared/voting', :locals => {resource: question}
+    =question.question
+
+=link_to "Sort by highest rated", question_sort_path(sort_method: 'highest_rated')
+= link_to "Sort by trending", question_sort_path(sort_method: 'trending')
+= link_to "Sort by most recent", questions_path
