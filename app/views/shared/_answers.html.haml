@@ -1,6 +1,7 @@
 
-%ul Question
--answers.each do |answer|  
+%ul
+-answers.each do |answer|
+  Question  
   %li=answer.question.question
   =render :partial => 'shared/voting', :locals => {resource: answer.question}
   %br
