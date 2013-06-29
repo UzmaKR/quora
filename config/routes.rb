@@ -6,13 +6,15 @@ Quora::Application.routes.draw do
   resources :sessions, :only => [:new, :create]
   resources :votes, :only => [:create]
   
-  resources :questions, :only => [:index, :show, :new, :create] do
+  resources :questions, :only => [:index, :show, :new, :create, :sort] do
     resources :answers, :only => [:index, :new, :create, :show]
   end
 
   match '/about' => 'static_pages#about'
   match '/contact' => 'static_pages#contact'
   match '/signout' => 'sessions#destroy'
+  match '/question_sort' => 'questions#sort'
+  match '/answer_sort' => 'answers#sort'
 
 
   # Sample of regular route:
