@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_filter :authenticate_user, :only => [:new, :create]
 
   def index
-    @questions = Question.all
+    @questions = Question.all.sort_by(&:created_at).reverse
   end
 
   def show
@@ -24,5 +24,8 @@ class QuestionsController < ApplicationController
     end
   end
 
-
+  def sort
+    @questions = Question.send(params[:sort_method].to_sym)
+    render :index
+  end
 end

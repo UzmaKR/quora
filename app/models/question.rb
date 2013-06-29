@@ -17,4 +17,15 @@ class Question < ActiveRecord::Base
     self.save
   end
 
+  def self.trending
+    self.all.sort_by(&:votes_time)
+  end
+
+  def self.votes_time
+    Vote.find(:all, :conditions => "created_at >= (#{DateTime.now} - #{1.hour}) AND votable_type = 'Question'")
+  end
+
+  def self.highest_rated
+    self.all.sort_by(&:score).reverse
+  end
 end
