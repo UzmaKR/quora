@@ -3,7 +3,6 @@ class VotesController < ApplicationController
   before_filter :already_voted
 
   def create
-    debugger
     resource = params[:resource]
     case resource 
     when "Answer"
