@@ -7,5 +7,7 @@
     .questions
       =link_to "Post a question", new_question_path, :class => "btn btn-large btn-success"
       %h3 Your Questions
+      =render :partial => 'shared/questions', :locals => { :questions => @user.questions }
     .answers
       %h3 Your Answers
+      =render :partial => 'shared/answers', :locals => { :answers => @user.answers }

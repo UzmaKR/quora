@@ -34,3 +34,4 @@ end
   answer.user = users.sample
   answer.save
 end
+

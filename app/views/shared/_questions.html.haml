@@ -1,0 +1,13 @@
+
+
+%ul Question
+-questions.each do |question|
+  %li=question.question
+  %br
+  -if question.answers.empty?
+    No answers available
+  -else
+    %ul Answers
+    -question.answers.each do |answer|
+      %li=answer.answer
+    %br
