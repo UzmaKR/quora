@@ -2,9 +2,8 @@
 
 %div
   -@answers.each do |a|
-    %p= a.answer
-    = a.votes.count
     = render :partial => 'shared/voting', :locals => {resource: a}
+    %p= a.answer
 
 %br
 =link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"

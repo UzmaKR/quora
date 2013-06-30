@@ -1,0 +1,12 @@
+%h4.sorting
+  =link_to "Highest Rated", question_sort_path(sort_method: 'highest_rated')
+  = link_to "Trending", question_sort_path(sort_method: 'trending')
+  = link_to "Most Recent", questions_path
+%ul.questions-index
+  -@questions.each do |question|
+    %li
+      %span.vote_count #{question.score} votes
+      %span.answer_count #{question.answers.count} answers
+      %span.question_text=question.question
+      %br
+      .voting_index=render :partial => 'shared/voting', :locals => {resource: question}

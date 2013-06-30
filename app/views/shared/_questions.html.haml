@@ -1,6 +1,4 @@
-
-
-%ul
+%ul Question
 -questions.each do |question|
   %li 
     %b Question: 
@@ -21,5 +19,4 @@
           -if (current_user == question.user)
             =link_to 'Best Answer', best_answer_path(:answer_id => answer.id),:method => :post, :class => 'bestanswer_link'
           =render :partial => 'shared/voting', :locals => {resource: answer}
-    %br
 

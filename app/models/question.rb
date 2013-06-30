@@ -17,4 +17,16 @@ class Question < ActiveRecord::Base
     self.save
   end
 
+  def self.trending
+    self.all.sort_by(&:votes_within_last_hour).reverse
+  end
+
+  def votes_within_last_hour
+    time_range = (Time.now - 1.hour)..Time.now
+    self.votes.find(:all, :conditions => {:created_at => time_range})
+  end
+
+  def self.highest_rated
+    self.all.sort_by(&:score).reverse
+  end
 end
