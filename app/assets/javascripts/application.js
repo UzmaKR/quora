@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require_tree .
 
 $(document).ready(function(){
@@ -22,6 +23,12 @@ $(document).ready(function(){
     e.preventDefault();
     $('.form h1').html('Sign In');
     $('.form form').replaceWith(sign_in_form);
+  });
+
+
+  $('button.best_answer_button').on('click', function(e){
+    console.log($(this).next('.best_answer'));
+    $(this).next('.best_answer').toggle();
   });
 
 

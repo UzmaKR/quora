@@ -10,6 +10,7 @@ gem 'haml'
 gem 'bcrypt-ruby'
 gem 'validates_email_format_of'
 gem 'heroku'
+gem 'jquery-ui-rails'
 
 
 #############################

@@ -10,3 +10,7 @@
       %span.question_text=question.question
       %br
       .voting_index=render :partial => 'shared/voting', :locals => {resource: question}
+    -if question.best_answer
+      %button{:class => "btn btn-large btn-warning best_answer_button"} Best Answer
+      %div{:class => "best_answer inactive"}
+        = question.best_answer.answer

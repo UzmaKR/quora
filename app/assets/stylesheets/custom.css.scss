@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -40,9 +40,11 @@ body {
 }
 
 .login {
-  width: 100%;
+  width: 125%;
+  z-index: 1;
   background: url('/assets/golden_gate.jpg');
   margin-top: -63px;
+  margin-left: -145px;
   height:800px;
 }
 
@@ -63,10 +65,11 @@ body {
 
 .questions-index li {
   background-color: #6997D3;
-  width: 50%;
+  width: 70%;
   padding: 20px;
   margin-bottom: 10px;
   height: 100px;
+  margin-left: -25px;
 }
 
 .vote_count {
@@ -80,8 +83,8 @@ body {
 }
 
 .voting_index {
-  margin-top: 10px;
-  float: right;
+  margin-top: 30px;
+  float: left;
 }
 
 .voting_index a {
@@ -91,6 +94,22 @@ body {
 
 .question_text {
   line-height: 30px;
+}
+
+button.best_answer_button {
+  float: right;
+  margin-right: 340px;
+  margin-top: -62px;
+}
+
+.inactive {
+  display: none;
+}
+
+.best_answer {
+  padding: 30px;
+  background-color: pink;
+  margin-bottom: 10px;
 }
 
 
