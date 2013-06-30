@@ -14,7 +14,7 @@
       %b Answers 
       -question.answers.each do |answer|
         %li.reg-answer
-          -if (answer.answer == question.best_answer.answer)        
+          -if (question.best_answer && answer.answer == question.best_answer.answer)        
             %span.best-answer=answer.answer
           -else
             %span=answer.answer 
