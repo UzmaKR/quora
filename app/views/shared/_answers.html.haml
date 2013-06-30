@@ -5,9 +5,11 @@
     %b Question:
     =answer.question.question
     =render :partial => 'shared/voting', :locals => {resource: answer.question}
-  %b Answer:
-  %span=answer.answer
-  =render :partial => 'shared/voting', :locals => {resource: answer}
+  %ul  
+    %li.no-bullets 
+      %b Answer:
+      %span=answer.answer
+      =render :partial => 'shared/voting', :locals => {resource: answer}
   %br
 
 
