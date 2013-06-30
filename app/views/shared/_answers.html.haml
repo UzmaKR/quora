@@ -1,12 +1,12 @@
 
 %ul
--answers.each do |answer|
-  Question  
-  %li=answer.question.question
-  =render :partial => 'shared/voting', :locals => {resource: answer.question}
-  %br
-  Answer:
-  =answer.answer
+-answers.each do |answer|  
+  %li
+    %b Question:
+    =answer.question.question
+    =render :partial => 'shared/voting', :locals => {resource: answer.question}
+  %b Answer:
+  %span=answer.answer
   =render :partial => 'shared/voting', :locals => {resource: answer}
   %br
 

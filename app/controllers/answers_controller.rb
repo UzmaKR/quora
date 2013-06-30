@@ -29,6 +29,7 @@ class AnswersController < ApplicationController
 
 
   def assign_best_answer
+    p params
     @answer = Answer.find(params[:answer_id])
     @question = @answer.question
     @question.best_answer=@answer
