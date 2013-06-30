@@ -19,16 +19,26 @@ $(document).ready(function(){
   var sign_in_form = '<form accept-charset="UTF-8" action="/sessions" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="LSt0M29Cq+1+wrqJJm+/exRNZ+Ffqt1lRdxMSx8vwUE="></div> <input id="session_email" name="session[email]" placeholder="Email" size="30" type="text"> <input id="session_password" name="session[password]" placeholder="Password" size="30" type="password"> <input name="commit" type="submit" value="Sign In" class="btn btn-large btn-primary"></form>';
   var sign_up_form = $('.form form');
 
+  $(document).on('click', 'button.best_answer_button', function(){
+    $(this).next('.best_answer').toggle();
+  });
+
   $('#switch-form').on('click', function(e){
     e.preventDefault();
     $('.form h1').html('Sign In');
     $('.form form').replaceWith(sign_in_form);
   });
 
+  $('.highest_rated').on('ajax:success', function(e, data){
+    $('.container').html(data);
+  });
 
-  $('button.best_answer_button').on('click', function(e){
-    console.log($(this).next('.best_answer'));
-    $(this).next('.best_answer').toggle();
+  $('.trending').on('ajax:success', function(e, data){
+    $('.container').html(data);
+  });
+
+  $('.most_recent').on('ajax:success', function(e, data){
+    $('.container').html(data);
   });
 
 
