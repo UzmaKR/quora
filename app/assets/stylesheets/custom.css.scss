@@ -12,6 +12,8 @@ body {
 
 .container {
   width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #wrapper {
@@ -43,6 +45,54 @@ body {
   margin-top: -63px;
   height:800px;
 }
+
+.sorting {
+  border-bottom: 1px solid black;
+  width: 40%;
+  padding-bottom: 15px;
+}
+
+.sorting a {
+  padding-right: 25px;
+}
+
+.questions-index {
+  font-size: 24px;
+  list-style: none;
+}
+
+.questions-index li {
+  background-color: #6997D3;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.vote_count {
+  border: 1px solid black;
+  padding: 3px; 
+}
+
+.answer_count {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.voting_index {
+  margin-top: 10px;
+  float: right;
+}
+
+.voting_index a {
+  text-decoration: none;
+  color: white;
+}
+
+.question_text {
+  line-height: 30px;
+}
+
 
 /* forms */
 
