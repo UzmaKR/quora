@@ -4,7 +4,6 @@ class Question < ActiveRecord::Base
   validates_presence_of :user_id
 
   belongs_to :user
-  #belongs_to :answer
   has_many :answers
   has_many :votes, as: :votable
 

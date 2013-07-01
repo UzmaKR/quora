@@ -2,26 +2,30 @@ require 'spec_helper'
 
 describe Answer do
 
-  let(:question) { create(:question) }
-  let(:answer) { create(:answer) }
+  before do
+    @question = create(:question)
+    @answer = create(:answer, :question_id => @question.id)
+  end
 
   describe "accessible attributes" do
-    it "should respond to answer attribute" do
-      expect(answer).to respond_to(:answer)
+    it "should respond_to answer" do
+      expect(@answer).to respond_to(:answer)
+    end
+
+    it "should respond_to user_id" do
+      expect(@answer).to respond_to(:user_id)
+    end
+
+    it "should respond_to user" do
+      expect(@answer).to respond_to(:user)
+    end
+
+    it "should respond_to question" do
+      expect(@answer).to respond_to(:answer)
+    end
+
+    it "should respond to votes" do
+      expect(@answer).to respond_to(:votes)
     end
   end
-
-  describe "valid answer" do
-    it "should not be blank" do
-      invalid_answer = build(:answer, :answer => "")
-      expect(invalid_answer).to_not be_valid
-    end
-  end
-
-  describe "associations" do
-    subject { answer }
-    it { should belong_to(:question) }
-  end
-
-
 end
