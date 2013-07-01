@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery.colorbox
 //= require_tree .
 
 $(document).ready(function(){

@@ -1,6 +1,6 @@
 .nav
+  %span=link_to "Post a question", new_question_path, { :class => "colorbox btn btn-large btn-success" }
   -if current_user
-    %span=link_to "Post a question", new_question_path, :class => "btn btn-large btn-success"
     %span= link_to "My Profile", user_path(current_user)
     %span= link_to "Sign Out", signout_path
   -else

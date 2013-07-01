@@ -53,8 +53,8 @@ body {
   z-index: 1;
   background: url('/assets/golden_gate.jpg');
   margin-top: -63px;
-  margin-left: -145px;
-  height:800px;
+  margin-left: -165px;
+  height: 100%;
 }
 
 .sorting {
@@ -150,8 +150,9 @@ footer {
   margin-top: -600px;
   margin-bottom: 100px;
   padding-bottom: 50px;
-  margin-left: 400px;
-  margin-right: 400px
+  margin-left: 250px;
+  margin-right: 400px;
+  width:65%;
 }
 
 
@@ -190,11 +191,12 @@ textarea:focus, input:focus{
 
 .form-sessions {
   background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
   border-radius: 25px;
   text-align: center;
   margin-bottom: 100px;
   padding-bottom: 50px;
-  margin-left: 400px;
+  margin-left: 250px;
   margin-right: 400px;
   padding-top: 20px;
 }
