@@ -1,19 +1,18 @@
 
-%ul.show
-  %li
-    %span.answer-count Answers #{@question.answers.count}
-    %span.votes-count Votes #{@question.score}
-    %span.question #{@question.question}
+%ul.show#header
+  %li.answer-count Answers #{@question.answers.count}
+  %li.votes-count Votes #{@question.score}
+  %li.question #{@question.question}
     
-%ul.show
+%ul.show#body
   -@answers.each do |a|
     %li
       %span.answer-votes-count Votes #{a.score}
       %span.answer= a.answer
-      %span= render :partial => 'shared/voting', :locals => {resource: a}
-      
+      %br
+      %span#vote= render :partial => 'shared/voting', :locals => {resource: a}, class: "votes"
+  %span=link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger button"
+  %br
+  %br
+  %span=link_to "Back to questions", question_path, class: "button"
 
-%span=link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"
-%br
-%br
-%span=link_to "Back to questions", question_path 

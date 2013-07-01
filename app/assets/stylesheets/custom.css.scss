@@ -10,8 +10,12 @@ body {
   margin-top: -10px;
 }
 
+// ul, ol {
+  // padding: 0;
+  // margin: 0 0 0px 0px;
+// }
 .container {
-  width: 80%;
+  width: 950px;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 90px;
@@ -266,40 +270,61 @@ li.no-bullets {
   list-style: none;
 }
 
+#header {
+  position: absolute;
+  text-align: center;
+}
+
+#body {
+  position: absolute;
+  top: 150px;
+}
+
+
 ul.show li {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
   background-color: lighblue;
+  min-height: 40px;
 }
 
-span.answer-count {
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // padding-bottom: 20px;
-   background-color: lightgray;
-  // margin-bottom: 40px;
+.show span {
+  padding: 0 5px;
 }
 
-span.votes-count {
+li.answer-count {
+  background-color: lightgray;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 39px;
+}
+
+
+li.votes-count {
   background-color: pink;
-  margin-bottom: 40px;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // padding-bottom: 20px;
+  width: 125px;
+  position: absolute;
+  top: 0;
+  left: 174px;
 }
 
 span.answer-votes-count {
   margin: 0 0 0 7%;
   background-color: pink;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // padding-bottom: 20px;
 }
 
-span.question {
+li.question {
   background-color: lightblue;
-  // padding-left: 20px;
-  // padding-right: 20px;
-  // padding-bottom: 20px;
+  position: absolute;
+  left: 309px;
+  width: 540px;
+  top: 0;
+}
+
+li.span#vote {
+  position: absolute;
+  left: 129px;
+}
+
+.button  {
+  margin-left: 72px;
 }
