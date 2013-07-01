@@ -27,7 +27,7 @@ class QuestionsController < ApplicationController
   def sort
     @questions = Question.send(params[:sort_method].to_sym)
     respond_to do |format| 
-      format.html
+      format.html { render :index, :layout => false}
       format.json { @questions.to_json }
     end
   end

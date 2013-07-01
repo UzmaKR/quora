@@ -1,7 +1,7 @@
 %h4.sorting
-  =link_to "Highest Rated", question_sort_path(sort_method: 'highest_rated')
-  = link_to "Trending", question_sort_path(sort_method: 'trending')
-  = link_to "Most Recent", questions_path
+  =link_to "Highest Rated", question_sort_path(sort_method: 'highest_rated'), :class => 'highest_rated', remote: true
+  = link_to "Trending", question_sort_path(sort_method: 'trending'), :class => 'trending', remote: true
+  = link_to "Most Recent", questions_path, :class => 'most_recent'
 %ul.questions-index
   -@questions.each do |question|
     %li
@@ -10,3 +10,7 @@
       %span.question_text=question.question
       %br
       .voting_index=render :partial => 'shared/voting', :locals => {resource: question}
+    -if question.best_answer
+      %button{:class => "btn btn-large btn-warning best_answer_button"} Best Answer
+      %div{:class => "best_answer inactive"}
+        = question.best_answer.answer
