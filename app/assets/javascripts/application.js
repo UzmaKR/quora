@@ -43,6 +43,12 @@ $(document).ready(function(){
     $(this).parent(0).children().first().addClass('best-answer');
   });
 
+  $('.bestanswer_link_user_profile').on('ajax:success', function(e, data){
+    console.log($(this));
+    $('.best_answer_user_profile').removeClass('best_answer_user_profile');
+    $(this).parent().addClass('best_answer_user_profile');
+  })
+
   $('.upvote').on('ajax:success', function(e, data){
     //TODO refactor this. it's horrible
     $('html').html(data);

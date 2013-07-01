@@ -119,11 +119,24 @@ button.best_answer_button {
   display: none;
 }
 
+.question-answers li {
+  list-style: none;
+  padding: 30px;
+  background-color: pink;
+  margin-bottom: 10px;
+  width: 65%;
+}
+
 .best_answer {
   padding: 30px;
   background-color: pink;
   margin-bottom: 10px;
   width: 65%;
+}
+
+li.best_answer_user_profile {
+  background-color: yellow;
+  list-style: none;
 }
 
 .question_text a {
@@ -320,7 +333,7 @@ ul.show li {
   padding: 0 5px;
 }
 
-li.answer-count {
+.answer-count {
   background-color: lightgray;
   width: 125px;
   position: absolute;
@@ -329,7 +342,7 @@ li.answer-count {
 }
 
 
-li.votes-count {
+.votes-count {
   background-color: pink;
   width: 125px;
   position: absolute;
@@ -342,7 +355,19 @@ span.answer-votes-count {
   background-color: pink;
 }
 
-li.question {
+span.answer {
+  background-color: lightblue;
+  position: absolute;
+  left: 199px;
+  width: 540px;
+  top: 0;
+}
+
+#voting {
+  margin-left: 33px;
+}
+
+.question {
   background-color: lightblue;
   position: absolute;
   left: 309px;

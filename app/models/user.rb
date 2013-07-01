@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   before_create :downcase_email
 
   def vote!(resource, value)
-    # should be changed to self.votes.create
     Vote.create(:value => value, votable_id: resource.id, votable_type: resource.class.to_s, :user_id => self.id)
     resource.score += value.to_i
     resource.save
