@@ -13,6 +13,7 @@ gem 'heroku'
 gem 'jquery-ui-rails'
 gem 'colorbox-rails'
 gem 'heroku'
+gem 'faker'
 
 
 #############################
@@ -50,6 +51,5 @@ group :test, :development do
   gem 'guard'                                   # for running specs during development
   gem 'guard-rspec'
   gem 'factory_girl_rails'                      # Factories for creating test objects
-  gem 'faker'
   gem 'sextant'
 end
