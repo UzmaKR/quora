@@ -8,11 +8,11 @@ class VotesController < ApplicationController
     when "Answer"
       answer = Answer.find(params[:resource_id])
       current_user.vote!(answer, params[:value])
-      redirect_to :back, notice: "Vote Registered"
+      redirect_to :back, success: "Vote Registered"
     else
       question = Question.find(params[:resource_id])
       current_user.vote!(question, params[:value])
-      redirect_to :back, notice: "Vote Registered"
+      redirect_to :back, success: "Vote Registered"
     end
   end
 

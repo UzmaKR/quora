@@ -1,7 +1,8 @@
 .nav
   -if current_user
-    = link_to "My Profile", user_path(current_user)
-    = link_to "Sign Out", signout_path
+    %span=link_to "Post a question", new_question_path, :class => "btn btn-large btn-success"
+    %span= link_to "My Profile", user_path(current_user)
+    %span= link_to "Sign Out", signout_path
   -else
-    = link_to "Sign In", new_session_path
-    = link_to "Sign Up", new_user_path
+    %span= link_to "Sign In", new_session_path
+    %span= link_to "Sign Up", new_user_path

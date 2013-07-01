@@ -42,4 +42,14 @@ $(document).ready(function(){
     $(this).parent(0).children().first().addClass('best-answer');
   });
 
+  $('.upvote').on('ajax:success', function(e, data){
+    //TODO refactor this. it's horrible
+    $('html').html(data);
+  });
+
+  $('.downvote').on('ajax:success', function(e, data){
+    //TODO refactor this. it's horrible
+    $('html').html(data);
+  });
+
 });
