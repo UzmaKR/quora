@@ -1,14 +1,14 @@
 
-%ul
+%ul.user-answered-questions
 -answers.each do |answer|  
-  %li
-    %b Question:
-    =answer.question.question
+  %li.user-answered-question
+    %b=link_to "#{answer.question.question}", question_path(answer.question.question) 
     =render :partial => 'shared/voting', :locals => {resource: answer.question}
   %ul  
-    %li.no-bullets 
+    %li.user-answer
       %b Answer:
       %span=answer.answer
+      %br
       =render :partial => 'shared/voting', :locals => {resource: answer}
   %br
 
