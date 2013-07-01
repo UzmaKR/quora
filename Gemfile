@@ -32,7 +32,8 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'                # syntatically awesome stylesheets - sass-lang.com for more info
   gem 'bootstrap-sass'
-  gem 'therubyracer', :require => 'v8'                            # javascript runtime to support coffeescript
+  gem 'therubyracer', :require => 'v8'    
+  gem 'uglifier'                        # javascript runtime to support coffeescript
 end
 
 
