@@ -7,7 +7,7 @@
     %li
       %span.vote_count #{question.score} votes
       %span.answer_count #{question.answers.count} answers
-      %span.question_text=question.question
+      %span.question_text=link_to "#{question.question}", question_path(question)
       %br
       .voting_index=render :partial => 'shared/voting', :locals => {resource: question}
     -if question.best_answer
