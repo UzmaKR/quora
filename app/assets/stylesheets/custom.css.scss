@@ -131,18 +131,47 @@ button.best_answer_button {
   color: white;
 }
 
-footer {
-  width: 100%;
-  background-color: black;
-  height: 50px;
-  text-align: center;
+
+.user-profile-questions li.user-question {
+  list-style-type: none;
+  background-color: #7595FF;
 }
 
-.post {
-  float: right;
+.user-profile-questions li.user-question a {
+  color: white;
+  text-decoration: none;
 }
 
+.user-answered-question{
+  background-color: #7595FF;
+  list-style: none;
+  font-size: 23px;
+  height: 54px;
+  width: 130%;
+  padding-left: 20px;
+  padding-top: 15px;
+}
 
+.user-answered-question a {
+  color: white;
+  text-decoration: none;
+}
+
+.user-answer {
+  width: 130%;
+  background-color: pink;
+  font-size: 20px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.reg-answer {
+  background-color: rgb(202, 202, 202);
+  list-style: none;
+  line-height: 30px;
+  padding: 5px;
+}
 
 
 /* forms */
