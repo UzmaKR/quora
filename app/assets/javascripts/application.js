@@ -37,5 +37,9 @@ $(document).ready(function(){
     $('.container').html(data);
   });
 
+  $('.bestanswer_link').on('ajax:success', function(event, data, status, xhr){
+    $('span.best-answer').removeClass('best-answer');
+    $(this).parent(0).children().first().addClass('best-answer');
+  });
 
 });

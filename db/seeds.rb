@@ -43,7 +43,7 @@ questions.each do |q|
     answer.save
     answers << answer
   end
-  q.answer = answers.sample
+  q.best_answer = answers.sample
   q.save
 end
 
