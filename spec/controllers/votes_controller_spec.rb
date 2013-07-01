@@ -10,7 +10,9 @@ describe VotesController do
 
   describe "post #CREATE" do
     context "when not logged in" do
-      expect{post :create, vote: attributes_for(:vote)}
+      xit "should" do
+        expect{post :create, vote: attributes_for(:vote)}
+      end
     end
   end
 

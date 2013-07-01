@@ -53,10 +53,12 @@ describe QuestionsController do
         }.to change(Question, :count).by(1)
       end
 
-      it "redirects to the new question" do
-        post :create, question: attributes_for(:question)
-        response.should render_template :show
+      xit "redirects to the new question" do
+        expect {
+          post :create, question: attributes_for(:question)
+        }.to redirect_to question_path(@question)
       end
+
     end
     context "with invalid attributes" do
       before(:each) do

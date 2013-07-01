@@ -3,7 +3,6 @@ class Answer < ActiveRecord::Base
   validates_presence_of :answer
 
   belongs_to :question
-  has_many :votes, as: :votable
-
   belongs_to :user
+  has_many :votes, as: :votable
 end

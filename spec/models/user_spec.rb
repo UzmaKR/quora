@@ -17,6 +17,18 @@ describe User do
     it "should respond to email" do
       expect(user).to respond_to(:email)
     end
+
+    it "should respond to questions" do
+      expect(user).to respond_to(:questions)
+    end
+
+    it "should respond to answers" do
+      expect(user).to respond_to(:answers)
+    end
+
+    it "should respond to votes" do
+      expect(user).to respond_to(:votes)
+    end
   end
 
   describe "user validations" do
@@ -57,8 +69,11 @@ describe User do
     end
   end
 
-  describe "associations" do
-    subject { user }
-    it { should have_many(:questions) }
+  describe "voting" do
+    let(:question) { user.questions.create(:question => "What is a cat?") }
+
+    it "should increase the user's vote count" do
+      expect{user.vote!(question, 1)}.to change(Vote, :count).by(1)
+    end 
   end
 end
