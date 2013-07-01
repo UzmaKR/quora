@@ -17,6 +17,17 @@ class Question < ActiveRecord::Base
     self.save
   end
 
+  def sorted_answers
+    answers_array = []
+    answers_array << best_answer
+    self.answers.each do |answer|
+      if answer != best_answer
+        answers_array << answer
+      end
+    end
+    answers_array
+  end
+
   def self.trending
     self.all.sort_by(&:votes_within_last_hour).reverse
   end
