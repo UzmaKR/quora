@@ -1,10 +1,19 @@
-%h3 [#{@question.score}] #{@question.question}
 
-%div
+%ul.show
+  %li
+    %span.answer-count Answers #{@question.answers.count}
+    %span.votes-count Votes #{@question.score}
+    %span.question #{@question.question}
+    
+%ul.show
   -@answers.each do |a|
-    = render :partial => 'shared/voting', :locals => {resource: a}
-    %p= a.answer
+    %li
+      %span.answer-votes-count Votes #{a.score}
+      %span.answer= a.answer
+      %span= render :partial => 'shared/voting', :locals => {resource: a}
+      
 
+%span=link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"
 %br
-=link_to "Post an answer", new_question_answer_path(@question), :class => "btn btn-large btn-danger"
-
+%br
+%span=link_to "Back to questions", question_path 

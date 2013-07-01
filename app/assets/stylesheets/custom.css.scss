@@ -257,6 +257,49 @@ span.best-answer {
   background: pink;
 }
 
+ul.show {
+  font-size: 20px;
+  list-style: none;
+}
+
 li.no-bullets {
   list-style: none;
+}
+
+ul.show li {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: lighblue;
+}
+
+span.answer-count {
+  // padding-left: 20px;
+  // padding-right: 20px;
+  // padding-bottom: 20px;
+   background-color: lightgray;
+  // margin-bottom: 40px;
+}
+
+span.votes-count {
+  background-color: pink;
+  margin-bottom: 40px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  // padding-bottom: 20px;
+}
+
+span.answer-votes-count {
+  margin: 0 0 0 7%;
+  background-color: pink;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  // padding-bottom: 20px;
+}
+
+span.question {
+  background-color: lightblue;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  // padding-bottom: 20px;
 }
