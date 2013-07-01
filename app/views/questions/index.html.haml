@@ -1,7 +1,7 @@
 %h4.sorting
   =link_to "Highest Rated", question_sort_path(sort_method: 'highest_rated'), :class => 'highest_rated', remote: true
   = link_to "Trending", question_sort_path(sort_method: 'trending'), :class => 'trending', remote: true
-  = link_to "Most Recent", questions_path, :class => 'most_recent', remote: true
+  = link_to "Most Recent", questions_path, :class => 'most_recent'
 %ul.questions-index
   -@questions.each do |question|
     %li

@@ -37,9 +37,5 @@ $(document).ready(function(){
     $('.container').html(data);
   });
 
-  $('.most_recent').on('ajax:success', function(e, data){
-    $('.container').html(data);
-  });
-
 
 });
